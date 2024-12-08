@@ -12,7 +12,7 @@ const logout = document.querySelector(".logout");
 const errorMsg = document.querySelector(".errormsg");
 const allUsers = [];
 //Save Var
-if (pathName === "/login/login") { // Register Paeg
+if (pathName === "/login") { // Register Paeg
 
     function sendInfo() {
         // Regex for validating English letters (a-z, A-Z)
