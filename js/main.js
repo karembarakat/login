@@ -73,7 +73,7 @@ if (pathName === "/login/") { // Register Paeg
         localStorage.setItem("allusers", JSON.stringify(allUsers));
 
 
-        window.location.href = "/login.html"
+        window.location.href = "/login/login.html"
         console.log(newUser);
     }
     // Event Listener
