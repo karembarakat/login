@@ -118,7 +118,7 @@ if (pathName === "/login/") { // Register Paeg
             // alert(`Welcome ${user.name}! ${user.id}`);
             localStorage.setItem('userID', JSON.stringify(user.id));
             // window.location.replace('/home.html');
-            window.location.href = "/home.html";
+            window.location.href = "/login/home.html";
         } else {
             errorMsg.textContent = "Invalid Email or Password."
             
@@ -138,7 +138,7 @@ if (pathName === "/login/") { // Register Paeg
     if (!userID) {
         console.log("No user is currently logged in.");
         // window.location.replace('/index.html');
-        window.location.replace("/ff");
+        window.location.replace("/login/");
     } else {
         let allusers = JSON.parse(localStorage.getItem("allusers")) || [];
         if (!Array.isArray(allusers)) {
