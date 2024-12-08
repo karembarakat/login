@@ -138,7 +138,7 @@ if (pathName === "/login/") { // Register Paeg
     if (!userID) {
         console.log("No user is currently logged in.");
         // window.location.replace('/index.html');
-        window.location.replace("/");
+        window.location.replace("/login");
     } else {
         let allusers = JSON.parse(localStorage.getItem("allusers")) || [];
         if (!Array.isArray(allusers)) {
