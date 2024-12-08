@@ -11,7 +11,7 @@ const logout = document.querySelector(".logout");
 const errorMsg = document.querySelector(".errormsg");
 const allUsers = [];
 //Save Var
-if (pathName === "/index.html") { // Register Paeg
+if (pathName === "/") { // Register Paeg
 
     function sendInfo() {
         // Regex for validating English letters (a-z, A-Z)
@@ -137,7 +137,7 @@ if (pathName === "/index.html") { // Register Paeg
     if (!userID) {
         // console.log("No user is currently logged in.");
         // window.location.replace('/index.html');
-        window.location.href = "/index.html";
+        window.location.href = "/";
     } else {
         let allusers = JSON.parse(localStorage.getItem("allusers")) || [];
         if (!Array.isArray(allusers)) {
