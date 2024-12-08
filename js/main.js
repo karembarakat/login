@@ -6,12 +6,13 @@ const uPassword = document.getElementById("pass");
 const btn = document.querySelector(".btn");
 const login = document.querySelector(".login");
 const pathName = window.location.pathname;
+const host = window.location.host;
 const content = document.querySelector(".content");
 const logout = document.querySelector(".logout");
 const errorMsg = document.querySelector(".errormsg");
 const allUsers = [];
 //Save Var
-if (pathName === "") { // Register Paeg
+if (pathName === "/") { // Register Paeg
 
     function sendInfo() {
         // Regex for validating English letters (a-z, A-Z)
@@ -96,6 +97,7 @@ if (pathName === "") { // Register Paeg
             return false;
         }
 
+
         const passwordRegex = /^.{8,}$/;
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -130,13 +132,13 @@ if (pathName === "") { // Register Paeg
     login.addEventListener("click", compareInfo);
 
 
-} else { // It's home
+} else if (pathName === '/home.html') { // It's home
     // Get data from localStorage
     let userID = JSON.parse(localStorage.getItem("userID"));
     if (!userID) {
-        // console.log("No user is currently logged in.");
+        console.log("No user is currently logged in.");
         // window.location.replace('/index.html');
-        window.location.href = "/";
+        window.location.replace("/");
     } else {
         let allusers = JSON.parse(localStorage.getItem("allusers")) || [];
         if (!Array.isArray(allusers)) {
