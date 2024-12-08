@@ -118,7 +118,7 @@ if (pathName === "/login/") { // Register Paeg
             // alert(`Welcome ${user.name}! ${user.id}`);
             localStorage.setItem('userID', JSON.stringify(user.id));
             // window.location.replace('/home.html');
-            window.location.replace = "/login/home.html";
+            window.location.replace(/login/home.html);
         } else {
             errorMsg.textContent = "Invalid Email or Password."
             
