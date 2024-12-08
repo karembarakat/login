@@ -12,7 +12,7 @@ const logout = document.querySelector(".logout");
 const errorMsg = document.querySelector(".errormsg");
 const allUsers = [];
 //Save Var
-if (pathName === "/") { // Register Paeg
+if (pathName === "/login") { // Register Paeg
 
     function sendInfo() {
         // Regex for validating English letters (a-z, A-Z)
@@ -80,7 +80,7 @@ if (pathName === "/") { // Register Paeg
     btn.addEventListener("click", function () {
         sendInfo();
     });
-} else if (pathName === "/login.html") { // Login Page
+} else if (pathName === "/login/login.html") { // Login Page
     // Compare info with localStorage
     function compareInfo() {
 
@@ -132,7 +132,7 @@ if (pathName === "/") { // Register Paeg
     login.addEventListener("click", compareInfo);
 
 
-} else if (pathName === '/home.html') { // It's home
+} else if (pathName === '/login/home.html') { // It's home
     // Get data from localStorage
     let userID = JSON.parse(localStorage.getItem("userID"));
     if (!userID) {
