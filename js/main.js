@@ -11,7 +11,7 @@ const logout = document.querySelector(".logout");
 const errorMsg = document.querySelector(".errormsg");
 const allUsers = [];
 //Save Var
-if (pathName === "/") { // Register Paeg
+if (pathName === "") { // Register Paeg
 
     function sendInfo() {
         // Regex for validating English letters (a-z, A-Z)
@@ -95,7 +95,6 @@ if (pathName === "/") { // Register Paeg
             errorMsg.textContent = "All inputs is required";
             return false;
         }
-
 
         const passwordRegex = /^.{8,}$/;
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
